@@ -3,7 +3,15 @@ from django.shortcuts import render
 
 
 def index(request):
-    return HttpResponse('Home Page')
+    context = {
+        'title': 'Home',
+        'content': 'Главная страница - HOME',
+        'list': ['first', 'second'],
+        'dict': {'first': 1},
+        'is_authentificated': False,
+    }
+    
+    return render(request, 'main/index.html', context)
 
 
 def about(request):
