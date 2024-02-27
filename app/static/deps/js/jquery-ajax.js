@@ -88,7 +88,7 @@ $(document).ready(function () {
                 }, 7000);
 
                 // Уменьшаем количество товаров в корзине (отрисовка)
-                cartCount -= data.quantity_deleted;
+                cartCount -= data.quantity_delete;
                 goodsInCartCount.text(cartCount);
 
                 // Меняем содержимое корзины на ответ от django (новый отрисованный фрагмент разметки корзины)
